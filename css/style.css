@@ -73,6 +73,12 @@ nav ul{
 }
 
 @media screen and (min-width: 900px){
+    body > header{
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+    }
+
     header {
         flex-direction: row;
         align-items: center;
@@ -124,6 +130,10 @@ nav ul{
     .card {
         border: solid 2px #45ADDD;
         flex-basis: 325px;
+    }
+
+    .card ul li:nth-child(2)::after{
+        content: '👍';
     }
 
     #gallery{
