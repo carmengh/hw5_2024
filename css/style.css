@@ -27,7 +27,10 @@ header{
 }
 
 /* Edit the css for the nav_links class to use flex to match our example. Do not modify the list items or the links - modify the nav_links class to use flex.  */
-
+nav ul{
+    display: flex;
+    flex-direction: column;
+}       
 
 /* Style the links so that they have the same color even after they have been visited */
 .nav-item a{
@@ -46,4 +49,96 @@ header{
 
 .card{
     flex-basis: 450px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+}
+
+.pricing{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}  
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery img{
+    border: solid 10px #50C7C7;
+    width: 300px;
+    margin: 10px 10px 10px 10px;
+}
+
+@media screen and (min-width: 900px){
+    header {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    nav ul {
+        flex-direction: row;
+    }
+
+    .card {
+        flex-basis: 275px;
+    }
+
+    .pricing {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* <script> 
+    document.addEventListener('DOMContentLoaded', function() {
+        window.onscroll = function() {myFunction()};
+        var navbar = document.querySelector("ul");
+        var sticky = navbar.offsetTop;
+            
+        function myFunction() {
+            if (window.scrollY >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    })
+    </script> */
+}
+
+@media (prefers-reduced-motion){
+    #logo {
+        animation: mymove  0s 0;
+    }
+}
+
+@media print{
+    body {
+        font-family: 'Arial', 'Helvetica';
+        background-image: none;
+    }
+
+    nav ul{
+        flex-direction: row;
+    }
+
+    .pricing {
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .card {
+        border: solid 2px #45ADDD;
+        flex-basis: 325px;
+    }
+
+    #gallery{
+        display: none;
+    }
+    .gallery{
+        display: none;
+    }
 }
