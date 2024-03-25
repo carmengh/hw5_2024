@@ -33,6 +33,9 @@ nav ul{
 }       
 
 /* Style the links so that they have the same color even after they have been visited */
+.nav-item a{
+    color: blue;
+}
 .nav-item a:visited{
     color: blue;
 }
